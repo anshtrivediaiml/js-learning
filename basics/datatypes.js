@@ -17,3 +17,8 @@ symbol=>unique
 
  //object
  console.table([typeof a,typeof b,typeof c,typeof d,typeof null,typeof undefined])
+
+
+ //Primitive : String,Number,Boolean,null,undefined,Symbol,BigInt
+
+ //Reference: Array,Objects,Functions 
