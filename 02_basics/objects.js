@@ -64,3 +64,15 @@ console.log(Object.values(tinderUser))
 
 console.log(tinderUser.hasOwnProperty('isloggedin')) //checks if the object tinderUser has islogged in property
 
+
+
+
+//part 3 
+const course ={
+    coursename:"JS",
+    price:"999",
+    courseinstructor:"ansh"
+}
+
+const {courseinstructor:instructor} =course
+console.log(instructor)
