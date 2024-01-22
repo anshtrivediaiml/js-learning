@@ -1,0 +1,62 @@
+Javascript is a single threaded language 
+Javascript Execution Context
+-> Global Execution Context
+->Function Execution Context
+->Eval Execution Context
+
+A Javascript program is executed in two phases 
+1st phase is memory creation phase
+2nd phase is Execution phase
+
+understanding it with Context to a program 
+consider the program 
+
+let val1=10
+let val2=5
+function addNum(num1,num2){
+    let total= num1 + num2
+    return total;
+}
+let result1= addNum(val1,val2)
+let result2= addNum(10,2)
+
+Steps 
+1) Global Execution - a code of any length runs through global execution and is
+allocated at the first place through "this"
+2) Memory phase - In the memory phase all the declared variables are assigned as 
+undefined, for example in the code above it gives as 
+val1= undefined 
+ val2=undefined
+ addNum= defination
+ result1= undefined
+ result2= undefined
+ This is known as first cycle 
+
+ 3)Execution phase:
+ val1= 10
+ val2=5
+ addNum=defination
+ result1=addNum --> it creates a new execution context 
+  addNum --> |------------------  |
+             |   new variable     |
+             |  environment +     |
+             |  Execution thread  |
+             |                    |
+             | -----------------  |
+                |               |
+                |               |
+                |               |
+     ------------                -----------------
+     |--->>  memory phase      Execution phase<--|
+       val1=undefined          num1= 10
+       val2=undefined          num2= 5
+       total=undefined         total=15 
+                                 ||
+                                 ||
+returned to                      ||
+global execution context  <------||
+
+then this function call execution context is deleted 
+then same execution context will be generated for another function call
+the total of which will be returned to the result2 
+
