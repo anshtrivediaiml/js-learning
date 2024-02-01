@@ -1,0 +1,155 @@
+#Projects related to DOM 
+
+##Project Link
+
+
+##Solution code
+
+
+##project 1
+
+'''
+HTML
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Color Switcher</title>
+	<style>
+	
+	span{
+	}
+
+.button{
+	margin:12px;
+	display:flex;
+	align-self:inline
+	flex-direction:column;
+justify-content:center;
+align-items:center;
+	width:100px;
+   height:70px;
+	box-sizing:content box;
+
+}
+
+#grey{
+	background-color:grey;
+	border:2px solid grey;
+  border-radius: 34px;
+	cursor:pointer;
+}
+#white{
+	background-color:white;
+	border:2px solid white;
+  border-radius: 34px;
+	box-shadow: 22px 22px 65px ;
+	cursor:pointer;
+}
+#blue{
+	background-color:blue;
+	border:2px solid blue;
+  border-radius: 34px;
+	box-shadow: 22px 22px 65px ;
+	cursor:pointer;
+}
+#yellow{
+	background-color:yellow;
+	border:2px solid yellow;
+  border-radius: 34px;
+	box-shadow: 22px 22px 100px;
+	cursor:pointer;
+}
+#purple{
+	background-color: #810CA8;
+	border:2px solid purple;
+  border-radius: 34px;
+	box-shadow: 22px 22px 100px;
+	cursor:pointer;
+}
+#dark_mode{
+	background-color: #2C3333;
+	border:2px solid purple;
+  border-radius: 34px;
+	box-shadow: 22px 22px 100px;
+	cursor:pointer;
+}
+
+</style>
+</head>
+<body>
+	<header>
+	<nav> 
+	<a href="/" aria-current="page">Home </a>
+	<a target="_blank" href="htttps://www.youtube.com/@chaiaurcode">Youtube Channel </a>
+	</nav>
+	</header>
+
+<main>
+	<div class="canvas">
+<h1>Color Scheme Switcher</h1>
+<span class="button" id="grey">Grey</span>
+<span class="button" id="white">White</span>
+<span class="button" id="blue">Blue</span>
+<span class="button" id="yellow">Yellow</span>
+<span class="button" id="purple">Purple</span>
+<span class="button" id="dark_mode">Dark Mode </span>
+
+<h2>
+Try Clicking on one of the colors above 
+<span>to change the background color of this page! </span>
+</h2>
+	</div>
+</main>
+<script src="index.js"></script>
+</body>
+</html>
+
+'''
+
+'''javascript
+
+const buttons=document.querySelectorAll('.button')
+const body=document.querySelector("body")
+
+buttons.forEach((button)=>{
+console.log(button);
+ button.addEventListener('click',(event)=>{
+console.log(event);
+console.log(event.target)
+if(event.target.id === "grey")
+{
+body.style.backgroundColor= event.target.id;
+}
+else if(event.target.id==="white")
+{
+  body.style.backgroundColor=event.target.id;
+}
+else if(event.target.id==="blue")
+{
+  body.style.backgroundColor=event.target.id;
+}
+else if(event.target.id==="yellow")
+{
+  body.style.backgroundColor=event.target.id;
+}
+
+else if(event.target.id==="purple")
+{
+  body.style.backgroundColor=event.target.id;
+}
+else if(event.target.id==="dark_mode")
+{
+  body.style.backgroundColor = "#2C3333"
+} 
+
+
+
+ })
+});
+
+
+'''
