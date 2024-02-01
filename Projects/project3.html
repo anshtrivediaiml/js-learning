@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style>
+         nav{
+        background-color: rgba(212, 169, 169,0.5);
+        display: flex;
+        align-items: center;
+        border:none;
+      padding:12px;
+      gap:5rem;
+     }
+
+     a{
+        text-decoration: none;
+        color:black;
+       font-weight: 600;
+     }
+    
+     a:hover{
+        color:blue;
+        text-decoration: underline;
+     }
+
+     .center{
+        display: grid;
+        place-items: center;
+      margin:35px;
+     }
+
+     span{
+        font-size: 45px;
+        font-weight: 900;
+        text-wrap: nowrap;
+        word-spacing: 12px;
+        letter-spacing:2px;
+        color:#9e7979
+
+       
+
+     }
+
+     #clock{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+        padding: 5px;
+       width: 45rem;
+       aspect-ratio: 1;
+        font-size: 9rem;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-weight: 800;
+        font-variant: inherit;
+            
+     }
+
+     body{
+        background-image: linear-gradient(to left bottom, #000000, #191518, #27232d, #2e3543, #2f4858);
+     }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/" aria-current="page">Home</a>
+        <a target="_blank" href="https://www.youtube.com/@chaiaurcode">
+          Youtube channel</a>
+      </nav>  
+<div class="center">
+    <div id="banner"><span>
+        Your Local Time
+    </span></div>
+    <div id="clock"></div>
+</div>
+</body>
+<script src="project3.js"></script>
+</html>
